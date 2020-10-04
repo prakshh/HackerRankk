@@ -6,7 +6,6 @@ We can keep a running max and update it if we
 find something larger, if we find something smaller
 we just keep looking and if we find something equal
 then we increment a counter variable
-
 Time Complexity: O(n) //We must check the height of every candle
 Space Complexity: O(1) //We only store a max and a frequency
 */
@@ -40,15 +39,12 @@ public class Solution {
     }
 }
 /********************
-
 import java.io.*;
 import java.util.*;
 import java.text.*;
 import java.math.*;
 import java.util.regex.*;
-
 public class Solution {
-
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in); 
         System.out.println("Enter no. of Candles : ");
@@ -59,9 +55,7 @@ public class Solution {
         
         for(int i=0; i < noOfCandles; i++){
             System.out.println("Enter height of Candle " +(i+1)+ " : ");
-
             int height = scan.nextInt();
-
             if(height > tallest){
                 tallest = height;
                 frequency = 1;
@@ -69,7 +63,6 @@ public class Solution {
             else if(height == tallest) frequency++;
         }
         scan.close();
-
         System.out.println("\nNo. of Tallest Candles : " +frequency);
     }
 }
